@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/crawler?serverTimezone=Asia/Shanghai
+    username: root
+    password: nick6518913
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: cindacoco.pojo
+  configuration:
+    map-underscore-to-camel-case: true

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cindacoco.mapper.JDMapper">
+    <insert id="save" parameterType="jd" >
+        insert into jd_item (spu,sku,title,price,pic,url) values
+        (#{spu},#{sku},#{title},#{price},#{pic},#{url})
+    </insert>
+
+    <select id="findAll" resultType="jd" parameterType="jd">
+        select id,spu,sku,title,price,pic,url from jd_item where sku = #{sku}
+    </select>
+</mapper>
